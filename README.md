@@ -1,4 +1,4 @@
-Bienvenidos a mi cuenta personal. 👋
+Bienvenidos a mi cuenta personal. 👋  
 
 Desarrollador web 💻 en continua formación 📖 con nociones básicas de programación 👾 y con gran interés en el sector de las tecnologías web.
 
@@ -6,19 +6,19 @@ Soy un apasionado de la tecnología y del desarrollo web. Durante estos 2 últim
 
 Dispongo de conocimientos en:
 
-![](https://github.com/BorjaRejano/RejanoDev/blob/main/img/html5.svg)
-![](https://github.com/BorjaRejano/RejanoDev/blob/main/img/css3.svg)
-![](https://github.com/BorjaRejano/RejanoDev/blob/main/img/javascript.svg)
-![](https://github.com/BorjaRejano/RejanoDev/blob/main/img/php.svg)
-![](https://github.com/BorjaRejano/RejanoDev/blob/main/img/java.svg)
-
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,css,js,java,php" />
+  </a>
+</p>
 
 Además de mis habilidades técnicas, soy una persona con gran capacidad para la adaptabilidad, capaz de trabajar en equipo con empatía y con facilidad para la toma de decisiones.
 
 Mis habilidades y conocimientos serán un activo valioso para cualquier equipo de desarrollo. 
 
+Poco a poco iré actualizando y subiendo los trabajos que vaya realizando.
 
-
+Mi correo electrónico es borjarejanobenitez@gmail.com para contacto.
 <!--
 **BorjaRejano/BorjaRejano** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
