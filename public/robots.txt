@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://borjarejano.github.io/BorjaRejano/sitemap.xml
