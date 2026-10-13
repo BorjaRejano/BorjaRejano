@@ -1,0 +1,81 @@
+import type { Project, Text } from '../portfolio';
+const spanish = (value: string): Text => ({ es: value, en: value });
+
+// Personal tender scope supplied by the user. Public building metrics checked 2026-10-12.
+// Sources: Construcía project/report; caleido.es (Core & Shell Gold); Daikin (181 m).
+export const caleidoProject: Project = {
+  id: 'torre-caleido',
+  featured: true,
+  reference: 'PROYECTO 04 — CONSTRUCÍA INSTALACIONES',
+  sector: 'building',
+  interventions: ['tender'],
+  contentLanguage: 'es',
+  coverLabel: 'TORRE DOCENTE / MEP / IE UNIVERSITY',
+  coverNote: 'GRÁFICO CONCEPTUAL',
+  title: spanish('Torre Caleido — IE University'),
+  cardTitle: spanish('Torre Caleido'),
+  cardSectorLabel: spanish('Edificación singular en altura'),
+  subtitle: spanish('Quinta Torre de Madrid · Instalaciones MEP'),
+  summary: spanish('Participación en la licitación integral de instalaciones MEP del complejo Torre Caleido, con adjudicación de un paquete de instalaciones a Construcía Instalaciones.'),
+  status: 'verified',
+  image: {
+    src: 'assets/projects/torre-caleido/infografia.png',
+    alt: spanish('Infografía ilustrativa de Torre Caleido junto a las Cuatro Torres de Madrid, con referencias a instalaciones MEP. Representación conceptual del entorno; el paquete adjudicado corresponde exclusivamente a la torre docente de IE University.'),
+    width: 1668,
+    height: 943,
+    fit: 'contain',
+    caption: 'Infografía ilustrativa aportada por Borja Rejano.',
+  },
+  caseStudy: {
+    company: 'Construcía Instalaciones',
+    location: 'Madrid, España',
+    role: 'Técnico de estudios · Licitaciones e ingeniería de valor',
+    sectorLabel: 'Edificación singular en altura e infraestructuras educativas',
+    typology: 'Edificio en altura de uso docente integrado en un complejo de usos mixtos',
+    description: [
+      'Participación en la licitación integral de las instalaciones del complejo Torre Caleido, conocido como la Quinta Torre de Madrid, un edificio singular de aproximadamente 180 metros de altura ubicado junto al distrito financiero de las Cuatro Torres.',
+      'La licitación comprendía las instalaciones técnicas del conjunto arquitectónico, que integra espacios educativos, comerciales, sanitarios y de restauración.',
+      'La oferta presentada por Construcía Instalaciones resultó adjudicataria del paquete de instalaciones correspondiente a la torre docente destinada a IE University. Las instalaciones del resto del complejo fueron adjudicadas a otra empresa.',
+      'Mi participación profesional se desarrolló durante la fase de estudios y licitaciones, incluyendo actividades de ingeniería de valor orientadas al análisis de soluciones técnicas, la identificación de oportunidades de mejora y la optimización económica de los proyectos de instalaciones.',
+      'El proyecto constituye una experiencia representativa en el estudio de instalaciones MEP de elevada complejidad técnica, propias de un edificio singular en altura.',
+    ],
+    tags: ['Edificios en altura', 'Ingeniería MEP', 'Licitaciones', 'Value Engineering', 'BT / MT', 'HVAC', 'PCI', 'BMS', 'BIM', 'LEED Gold'],
+    metrics: [
+      { value: '≈ 180 m', label: 'Altura de la torre' },
+      { value: '34 plantas', label: 'Sobre rasante · descripción de Construcía' },
+      { value: '≈ 59.000 m²', label: 'Superficie del proyecto publicada por Construcía; no equivale al paquete adjudicado' },
+      { value: 'LEED Gold', label: 'Caleido · Core & Shell' },
+    ],
+    participation: {
+      title: 'Estudios, licitaciones e ingeniería de valor',
+      description: [
+        'La oferta inicial comprendía las diferentes zonas y usos del complejo. El alcance finalmente adjudicado a Construcía Instalaciones se limitó a las instalaciones de la torre docente de IE University.',
+        'Mi participación terminó en la fase de licitación. El equipo de obra asumió la ejecución posterior de las instalaciones.',
+        'Ingeniería de valor y optimización técnico-económica: análisis de soluciones y evaluación de alternativas para mejorar prestaciones y costes previstos, manteniendo funcionalidad, calidad, seguridad y cumplimiento normativo. Esta competencia se desarrolla en la experiencia general de Construcía.',
+      ],
+      responsibilities: [],
+      outcome: 'Adjudicación a Construcía Instalaciones exclusivamente del paquete de instalaciones de la torre docente de IE University.',
+      cardLabel: 'Licitación adjudicada',
+    },
+    phases: [],
+    disciplinesTitle: 'Disciplinas técnicas de las instalaciones',
+    disciplines: [
+      { id: 'electrical', title: 'Instalaciones eléctricas', icon: 'electrical', systems: ['Media tensión', 'Baja tensión', 'Distribución eléctrica general', 'Instalaciones de alumbrado'] },
+      { id: 'mechanical', title: 'Climatización y ventilación', icon: 'mechanical', systems: ['Producción y distribución de frío', 'Climatización', 'Ventilación', 'Tratamiento y renovación de aire', 'Redes hidráulicas de climatización'] },
+      { id: 'fire', title: 'Protección contra incendios', icon: 'fire', systems: ['Detección y alarma', 'Extinción', 'Instalaciones generales de protección contra incendios'] },
+      { id: 'hydraulic', title: 'Instalaciones hidráulicas y gas', icon: 'hydraulic', systems: ['Fontanería', 'Saneamiento', 'Gas natural'] },
+      { id: 'communications', title: 'Comunicaciones, seguridad y automatización', icon: 'communications', systems: ['Redes de datos', 'CCTV', 'Control de accesos', 'Megafonía', 'BMS', 'Control y gestión técnica de instalaciones'] },
+    ],
+    featuresTitle: 'Edificación singular, digitalización y sostenibilidad',
+    features: [
+      { title: 'Infraestructura singular de gran altura', icon: 'building', description: 'Instalaciones integradas en una torre de aproximadamente 180 metros, con necesidades de coordinación multidisciplinar, distribución de servicios técnicos y seguridad.' },
+      { title: 'Coordinación digital de instalaciones', subtitle: 'Metodología BIM', icon: 'bim', description: 'Modelos digitales para coordinar instalaciones e información técnica del proyecto. Mi participación en licitación no se presenta como modelado o coordinación BIM en obra.' },
+      { title: 'Optimización de procesos', subtitle: 'Lean Construction', icon: 'circular', description: 'Principios Lean aplicados a planificación, logística y eficiencia constructiva por el equipo del proyecto, diferenciados de mi participación en licitación.' },
+      { title: 'Certificación LEED Gold', subtitle: 'Core & Shell · Caleido', icon: 'sustainability', description: 'Certificación del edificio y su envolvente, con criterios de eficiencia energética, sostenibilidad y calidad ambiental. No representa una certificación personal ni del paquete de licitación.' },
+      { title: 'Seguridad y protección contra incendios', icon: 'fire', description: 'Soluciones de protección y evacuación adaptadas a un edificio de gran altura, como características del proyecto y sin atribución de diseño personal.' },
+    ],
+    competencies: ['Estudio de instalaciones MEP en edificación singular en altura', 'Participación en licitación integral de un complejo de usos mixtos', 'Ingeniería de valor y evaluación de alternativas técnico-económicas'],
+    images: [],
+    documents: [],
+  },
+};

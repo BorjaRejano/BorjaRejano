@@ -1,0 +1,70 @@
+import type { Project, Text } from '../portfolio';
+const spanish = (value: string): Text => ({ es: value, en: value });
+
+// Grouped tender experience and awarded stores confirmed by the user.
+export const primarkProject: Project = {
+  id: 'primark',
+  kind: 'group',
+  coverLabel: 'RETAIL / MEP / BT / HVAC / PCI',
+  coverNote: 'GRÁFICO CONCEPTUAL',
+  reference: 'PROYECTO 03 — CONSTRUCÍA INSTALACIONES',
+  sector: 'building',
+  interventions: ['tender'],
+  contentLanguage: 'es',
+  title: spanish('Licitaciones de instalaciones MEP para establecimientos Primark'),
+  cardTitle: spanish('Primark'),
+  subtitle: spanish('Licitaciones de instalaciones MEP para establecimientos comerciales'),
+  summary: spanish('Participación en licitaciones de instalaciones MEP para diferentes establecimientos Primark, con varias obras adjudicadas a Construcía Instalaciones, aplicando ingeniería de valor sobre proyectos desarrollados bajo metodología Lean Construction.'),
+  status: 'verified',
+  image: {
+    src: 'assets/projects/primark/infografia.png',
+    alt: spanish('Infografía ilustrativa de un establecimiento Primark con referencias a instalaciones eléctricas, climatización, iluminación, protección contra incendios y comunicaciones. Representación de la agrupación de licitaciones, sin identificar una tienda concreta.'),
+    width: 1670,
+    height: 942,
+    fit: 'contain',
+    caption: 'Infografía ilustrativa aportada por Borja Rejano.',
+  },
+  caseStudy: {
+    company: 'Construcía Instalaciones',
+    client: 'Primark',
+    location: 'Diferentes establecimientos',
+    role: 'Técnico de estudios · Ingeniería de estudios y licitaciones',
+    sectorLabel: 'Retail y grandes superficies comerciales',
+    typology: 'Agrupación de licitaciones de instalaciones para establecimientos comerciales',
+    description: [
+      'Participación en distintas licitaciones de instalaciones técnicas para establecimientos comerciales Primark, dentro del ámbito de ingeniería de estudios y preparación de ofertas de instalaciones MEP.',
+      'Los proyectos comprendían instalaciones eléctricas de baja tensión, climatización, ventilación, protección contra incendios, sistemas de seguridad, comunicaciones, fontanería y saneamiento.',
+      'Durante la fase de licitación se aplicaban criterios de ingeniería de valor, mediante la revisión de las soluciones inicialmente proyectadas y el estudio de alternativas técnicas orientadas a mejorar las prestaciones de las instalaciones y optimizar los costes previstos.',
+      'Los proyectos se desarrollaban bajo metodología Lean Construction, enfocada en la eficiencia de los procesos, la optimización de recursos y la reducción de actividades que no aportan valor.',
+    ],
+    tags: ['Retail', 'Ingeniería MEP', 'Licitaciones', 'Value Engineering', 'Lean Construction', 'Baja tensión', 'HVAC', 'PCI'],
+    participation: {
+      title: 'Ingeniería de estudios y licitaciones',
+      description: [
+        'Participación en distintas licitaciones de instalaciones MEP para establecimientos Primark, varias de las cuales concluyeron con la adjudicación de las obras a Construcía Instalaciones.',
+        'Entre las obras adjudicadas figuran Primark Bilbao, Parquesur, Conde Peñalver, La Vaguada y Xanadú.',
+        'Mi participación se desarrolló en la fase de estudios y licitaciones. La ejecución posterior, cuando correspondía, era responsabilidad del equipo de obra.',
+      ],
+      responsibilities: [],
+      outcome: 'Varias licitaciones adjudicadas a Construcía Instalaciones.',
+      cardLabel: 'Varias licitaciones adjudicadas',
+    },
+    phases: [],
+    disciplinesTitle: 'Disciplinas técnicas del proyecto',
+    disciplines: [
+      { id: 'electrical', title: 'Instalaciones eléctricas', icon: 'electrical', systems: ['Instalaciones eléctricas de baja tensión (BT)'] },
+      { id: 'mechanical', title: 'Climatización y ventilación', icon: 'mechanical', systems: ['Sistemas de aire acondicionado', 'Instalaciones de climatización', 'Sistemas de ventilación'] },
+      { id: 'fire', title: 'Protección contra incendios', icon: 'fire', systems: ['Sistemas de detección de incendios', 'Sistemas de extinción de incendios'] },
+      { id: 'security', title: 'Seguridad y comunicaciones', icon: 'communications', systems: ['Sistemas de videovigilancia CCTV', 'Redes de datos'] },
+      { id: 'hydraulic', title: 'Instalaciones hidráulicas', icon: 'hydraulic', systems: ['Instalaciones de fontanería', 'Instalaciones de saneamiento'] },
+    ],
+    featuresTitle: 'Ingeniería de valor y Lean Construction',
+    features: [
+      { title: 'Ingeniería de valor — Value Engineering', icon: 'bim', description: 'Revisión técnica y estudio de alternativas para optimizar el coste de ejecución manteniendo requisitos funcionales, técnicos, normativos y de calidad. Esta competencia transversal se desarrolla en la experiencia general de Construcía Instalaciones.' },
+      { title: 'Metodología Lean Construction', icon: 'circular', description: 'Planteamiento de los proyectos orientado a eficiencia de procesos, optimización de recursos, reducción de desperdicios, planificación y mejora continua. Mi participación en licitación no implica responsabilidad de implantación Lean durante la ejecución.' },
+    ],
+    competencies: ['Estudios y preparación de ofertas de instalaciones MEP para retail', 'Revisión de soluciones y estudio de alternativas técnicas', 'Evaluación de la relación entre coste y prestaciones'],
+    images: [],
+    documents: [],
+  },
+};
