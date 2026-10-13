@@ -1,3 +1,5 @@
+import { evosProjects } from './projects/evos';
+import { evosExperience } from './evos-experience';
 import { porscheProject } from './projects/porsche-iberica';
 import { sonVidaProject } from './projects/hotel-son-vida';
 import { interxionProject } from './projects/interxion-mad3';
@@ -95,6 +97,7 @@ export interface Project {
   deliveryLabel?: Text;
   coverLabel?: string;
   coverNote?: string;
+  coverIcon?: 'control' | 'fire' | 'solar';
   kind?: 'individual' | 'group';
   id: string;
   reference: string;
@@ -115,6 +118,7 @@ export interface Project {
   image?: ProjectImage;
   contentLanguage?: Language;
   caseStudy?: ProjectCaseStudy;
+  caseStudyEnglish?: ProjectCaseStudy;
 }
 // Professional projects confirmed by the user.
 export const projects: Project[] = [
@@ -130,11 +134,13 @@ export const projects: Project[] = [
   rentalProject,
   coperoProject,
   ...engineeringGroups,
+  ...evosProjects,
 ];
 export interface Experience {
+  contextSource?: { label: Text; href: string };
   catalogLink?: { href: string; label: Text };
   scopeIndicator?: { value: string; description: Text };
-  ownerManagement?: { title: Text; emphasis: Text; areas: { title: Text; items: Text[] }[] };
+  ownerManagement?: { title: Text; emphasis: Text; note?: Text; areas: { title: Text; items: Text[] }[] };
   responsibilities?: Text[];
   valueEngineering?: { title: Text; description: Text[]; areas: Text[]; steps: Text[] };
   period: Text;
@@ -145,13 +151,7 @@ export interface Experience {
   projectLinks?: { id: string; label: Text; summary: Text }[];
 }
 export const experience: Experience[] = [
-  {
-    period: text('Junio 2026 – Actualidad', 'June 2026 – Present'),
-    role: text('Ingeniero de mantenimiento eléctrico', 'Electrical maintenance engineer'),
-    company: text('EVOS', 'EVOS'),
-    description: text('Gestión y coordinación de proyectos de ingeniería, mejora y modernización de instalaciones en una terminal marítima Oil & Gas, en el área de Mantenimiento Eléctrico e Instrumentación. Definición técnica, planificación, coordinación de contratistas, supervisión y puesta en servicio, atendiendo a requisitos técnicos, de seguridad y calidad.', 'Management and coordination of engineering, improvement and modernisation projects at an Oil & Gas marine terminal, within Electrical Maintenance and Instrumentation. Technical definition, planning, contractor coordination, supervision and commissioning, addressing technical, safety and quality requirements.'),
-    placeholder: false,
-  },
+  evosExperience,
   {
     period: text('Noviembre 2023 – Septiembre 2025', 'November 2023 – September 2025'),
     role: text('Ingeniero eléctrico de diseño', 'Electrical design engineer'),
@@ -172,6 +172,7 @@ export const experience: Experience[] = [
     company: text('Areall', 'Areall'),
     description: text('Desempeño de funciones de Project Manager de Instalaciones en proyectos de edificación, formando parte del equipo encargado de la gestión integral de las obras en representación de la propiedad o promotora. Responsabilidad sobre la gestión técnica, económica y administrativa de las instalaciones MEP, manteniendo interlocución directa con el cliente y coordinando a estudios de arquitectura, ingenierías, empresas constructoras, instaladoras y compañías suministradoras. Participación en todo el ciclo del proyecto, incluyendo desarrollo técnico, licitaciones, contratación, control económico, seguimiento de plazos, gestión de incidencias, legalizaciones y postventa. El trabajo incluía la preparación de informes técnicos y económicos para la propiedad, la comunicación de desviaciones y riesgos, y la coordinación de soluciones para garantizar el avance de los proyectos.', 'Building services Project Manager within the team managing construction projects on behalf of the owner or developer. Responsibility for technical, financial and administrative management of MEP systems, with direct client liaison and coordination of architects, engineers, builders, installers and utility companies. Involvement throughout the project lifecycle, including technical development, tendering, procurement, financial control, schedules, issue management, legalisation and aftercare. Preparation of technical and financial reports for the owner, communication of deviations and risks, and coordination of solutions to support project progress.'),
     ownerManagement: {
+      note: text('Areall gestionaba el proyecto por encargo de la propiedad; mi responsabilidad se centraba en las instalaciones MEP. Las funciones de proyecto, dirección facultativa y ejecución correspondían a los equipos responsables de cada ámbito.', 'Areall managed the project on behalf of the owner; my responsibility focused on MEP systems. Design, statutory site supervision and construction remained with the teams responsible for each scope.'),
       title: text('Project Management en representación de la propiedad', 'Project Management on behalf of the owner'),
       emphasis: text('Project Management · Representación de la propiedad · Gestión técnico-económica', 'Project Management · Owner representation · Technical and financial management'),
       areas: [
@@ -244,6 +245,9 @@ export const training = [
   text('Gestión ágil de proyectos · 16 horas', 'Agile project management · 16 hours'),
   text('Prevención básica en construcción · 60 horas', 'Basic construction risk prevention · 60 hours'),
 ];
+
+
+
 
 
 

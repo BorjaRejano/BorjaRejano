@@ -182,6 +182,7 @@ function englishCase(project: Project, summary: string): ProjectCaseStudy {
 
 export function localizeProject(project: Project, language: 'es' | 'en'): Project {
   if (language === 'es') return project;
+  if (project.caseStudyEnglish) return { ...project, reference: project.reference.replace('PROYECTO', 'PROJECT'), caseStudy: project.caseStudyEnglish, contentLanguage: 'en' };
   const entry = entries[project.id];
   if (!entry) return project;
   const [title, subtitle, summary] = entry;
@@ -189,6 +190,7 @@ export function localizeProject(project: Project, language: 'es' | 'en'): Projec
   const isSite = project.caseStudy?.company === 'Constructora San José';
   return { ...project, contentLanguage: 'en', title: { es: project.title.es, en: title }, cardTitle: { es: project.cardTitle?.es ?? project.title.es, en: title }, cardSectorLabel: project.id === 'torre-caleido' ? { es: project.cardSectorLabel?.es ?? '', en: 'Landmark high-rise buildings' } : undefined, subtitle: { es: project.subtitle?.es ?? '', en: subtitle }, summary: { es: project.summary.es, en: summary }, reference: project.reference.replace('PROYECTO', 'PROJECT'), coverLabel: 'ELECTRICAL ENGINEERING / TECHNICAL SYSTEMS', coverNote: 'CONCEPTUAL ILLUSTRATION', deliveryLabel: project.deliveryLabel ? { es: project.deliveryLabel?.es ?? '', en: isSite ? 'Completed construction' : project.caseStudy?.company === 'Areall' ? 'Project Management' : project.id === 'edar-huelva' ? 'Technical review of tender documentation' : project.id === 'desaladora-oropesa-cabanes' ? 'Complete electrical design' : project.id.startsWith('sg-') ? 'Electrical design and technical review' : project.id === 'edar-el-copero' ? 'Electrical design and detailed engineering' : 'Electrical design' } : undefined, image: project.image ? { ...project.image, alt: { es: project.image.alt.es, en: `Illustrative infographic of ${title}; conceptual representation.` } } : undefined, caseStudy: data };
 }
+
 
 
 

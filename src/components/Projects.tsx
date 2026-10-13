@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import type { KeyboardEvent } from 'react';
-import { ArrowUpRight, Layers, RotateCcw, X } from 'lucide-react';
+import { ArrowUpRight, Layers, Monitor, Flame, Sun, RotateCcw, X } from 'lucide-react';
 import { interventions, projects, sectors } from '../data/portfolio';
 import type { Intervention, Language, Project, Sector } from '../data/portfolio';
 import { ui } from '../data/copy';
@@ -14,10 +14,11 @@ export function ProjectCard({ project: sourceProject, lang }: { project: Project
   const project = localizeProject(sourceProject, lang); const contentLang = lang;
   const data = project.caseStudy;
   const cover = projectCover(project);
+  const CoverIcon = project.coverIcon === 'control' ? Monitor : project.coverIcon === 'fire' ? Flame : project.coverIcon === 'solar' ? Sun : Layers;
   return <article className={`project-card${project.featured ? ' project-card--featured' : ''}`} lang={contentLang}>
     <div className={`project-illustration${cover?.fit === 'contain' ? ' project-illustration--infographic' : ''}`}>
       {cover ? <img src={assetUrl(cover.src)} alt={cover.alt[contentLang]} width={cover.width} height={cover.height} srcSet={adaptiveSources(cover)} sizes={cover.sizes ?? "(max-width: 700px) 100vw, 33vw"} loading="lazy" decoding="async" />
-        : data ? <div className="case-cover" aria-hidden="true"><Layers size={38} strokeWidth={1.2} /><span>{project.coverLabel ?? 'MEP / BT · MT / HVAC / BMS'}</span><small>{project.coverNote ?? 'GRÁFICO CONCEPTUAL'}</small></div>
+        : data ? <div className="case-cover" aria-hidden="true"><CoverIcon size={38} strokeWidth={1.2} /><span>{project.coverLabel ?? 'MEP / BT · MT / HVAC / BMS'}</span><small>{project.coverNote ?? 'GRÁFICO CONCEPTUAL'}</small></div>
         : <EngineeringDiagram sector={project.sector} />}
       <span className="drawing-reference">{project.reference}</span>
     </div>
@@ -79,4 +80,5 @@ export function ProjectDialog({ lang }: { lang: Language }) {
     </div>}
   </dialog>;
 }
+
 

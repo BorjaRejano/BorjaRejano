@@ -3,6 +3,7 @@ export const navigation = [
   { id: 'about', label: text('Perfil', 'Profile') }, { id: 'specialties', label: text('Especialidades', 'Specialties') }, { id: 'projects', label: text('Proyectos', 'Projects') }, { id: 'experience', label: text('Experiencia', 'Experience') }, { id: 'skills', label: text('Competencias', 'Skills') }, { id: 'contact', label: text('Contacto', 'Contact') },
 ];
 export const ui = {
+  footerBrand: text('INGENIERÍA', 'ENGINEERING'),
   skip: text('Saltar al contenido', 'Skip to content'), menu: text('Navegación principal', 'Main navigation'), openMenu: text('Abrir menú', 'Open menu'), closeMenu: text('Cerrar menú', 'Close menu'), theme: text('Cambiar a modo claro', 'Switch to light mode'), darkTheme: text('Cambiar a modo oscuro', 'Switch to dark mode'),
   hero: text('Ingeniero', 'engineer'), heroAccent: text('eléctrico', 'Electrical'), heroLabel: text('BORJA REJANO / INGENIERÍA', 'BORJA REJANO / ENGINEERING'), viewProjects: text('Ver mi participación en proyectos', 'View my project involvement'), viewExperience: text('Ver experiencia', 'View experience'), engineering: text('DISEÑO · EJECUCIÓN · GESTIÓN', 'DESIGN · DELIVERY · MANAGEMENT'),
   experienceMetric: text('Más de 10 años de experiencia', 'Over 10 years of experience'), sectorsMetric: text('Industria · Edificación · Agua', 'Industry · Buildings · Water'), scopeMetric: text('Del diseño a la puesta en servicio', 'From design to commissioning'), scopeValue: text('Visión integral', 'Integrated approach'),
@@ -16,5 +17,6 @@ export const ui = {
   educationTitle: text('Formación técnica', 'Technical education'), trainingTitle: text('Formación complementaria', 'Additional training'),
   contactLabel: text('CONTACTO PROFESIONAL', 'PROFESSIONAL CONTACT'), contactTitle: text('Conoce mejor mi perfil.', 'Get to know my professional background.'), contactIntro: text('Si quieres conocer mejor mi experiencia o valorar mi perfil para tu equipo, puedes escribirme o consultar mi CV y LinkedIn.', 'To learn more about my experience or consider my profile for your team, you can email me or explore my CV and LinkedIn.'), email: text('Escribir un email', 'Send an email'), cv: text('Descargar CV provisional', 'Download placeholder CV'), cvFinal: text('Descargar CV', 'Download CV'), cvNote: text('El CV es una plantilla provisional, pendiente de completar.', 'The CV is a placeholder template awaiting completion.'), footer: text('Ingeniería eléctrica e industrial', 'Electrical & industrial engineering'), top: text('Volver al inicio', 'Back to top'), copyright: text('Contenido profesional y plantillas identificadas.', 'Professional content and clearly marked templates.'),
 };
+
 
 

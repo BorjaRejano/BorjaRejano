@@ -2,7 +2,7 @@ import type { Project, Text } from '../portfolio';
 const spanish = (value: string): Text => ({ es: value, en: value });
 
 export const coperoProject: Project = {
-  id: 'edar-el-copero', reference: 'PROYECTO 01 — SOLUCIONES GLOBALES', sector: 'water', interventions: ['design'], contentLanguage: 'es',
+  id: 'edar-el-copero', featured: true, reference: 'PROYECTO 01 — SOLUCIONES GLOBALES', sector: 'water', interventions: ['design'], contentLanguage: 'es',
   title: spanish('Ampliación de la EDAR El Copero'), subtitle: spanish('Ingeniería eléctrica de detalle BT / MT — Dos Hermanas, Sevilla'),
   summary: spanish('Desarrollo de ingeniería eléctrica de detalle de baja y media tensión para la ampliación de la EDAR El Copero: transformación, respaldo, CCM, accionamientos, distribución y alumbrado, con cálculos, especificaciones, planos, pliegos, mediciones y presupuestos.'),
   status: 'verified', deliveryLabel: spanish('Ingeniería eléctrica de diseño y detalle'),
@@ -47,3 +47,4 @@ export const coperoProject: Project = {
     images: [], documents: [],
   },
 };
+
