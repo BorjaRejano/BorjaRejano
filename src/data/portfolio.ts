@@ -34,6 +34,7 @@ export const interventions = [
   { id: 'tender', title: text('Estudios y licitaciones', 'Studies & tenders'), description: text('Participación en ofertas de instalaciones', 'Participation in systems tenders') },
   { id: 'design', title: text('Diseño', 'Design'), description: text('Ingeniería y documentación técnica', 'Engineering & technical documentation') },
   { id: 'delivery', title: text('Ejecución', 'Delivery'), description: text('Supervisión y puesta en servicio', 'Supervision & commissioning') },
+  { id: 'maintenance', title: text('Mantenimiento', 'Maintenance'), description: text('Mantenimiento preventivo y correctivo de instalaciones', 'Preventive and corrective maintenance of systems') },
   { id: 'management', title: text('Gestión', 'Management'), description: text('Planificación y coordinación de contratistas', 'Planning & contractor coordination') },
 ] as const;
 export type Intervention = typeof interventions[number]['id'];
@@ -122,19 +123,19 @@ export interface Project {
 }
 // Professional projects confirmed by the user.
 export const projects: Project[] = [
-  porscheProject,
-  sonVidaProject,
-  interxionProject,
-  castellanaProject,
-  primarkProject,
-  caleidoProject,
-  argosProject,
-  argosIIProject,
-  almazaraProject,
-  rentalProject,
-  coperoProject,
-  ...engineeringGroups,
   ...evosProjects,
+  ...[...engineeringGroups].reverse(),
+  coperoProject,
+  rentalProject,
+  almazaraProject,
+  argosIIProject,
+  argosProject,
+  caleidoProject,
+  primarkProject,
+  castellanaProject,
+  interxionProject,
+  sonVidaProject,
+  porscheProject,
 ];
 export interface Experience {
   contextSource?: { label: Text; href: string };
@@ -245,6 +246,7 @@ export const training = [
   text('Gestión ágil de proyectos · 16 horas', 'Agile project management · 16 hours'),
   text('Prevención básica en construcción · 60 horas', 'Basic construction risk prevention · 60 hours'),
 ];
+
 
 
 

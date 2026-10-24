@@ -57,7 +57,7 @@ const makeCase = (lang: 'es' | 'en'): ProjectCaseStudy => ({
   competencies: evosTags.slice(3).map(tag => tag[lang]), images: [], documents: [],
 });
 export const evosProjects: Project[] = [{
-  id: 'evos-project-management', reference: 'PROYECTOS — EVOS ALGECIRAS', sector: 'industry', interventions: ['design', 'delivery', 'management'],
+  id: 'evos-project-management', reference: 'PROYECTOS — EVOS ALGECIRAS', sector: 'industry', interventions: ['maintenance', 'design', 'delivery', 'management'],
   title: t('Mantenimiento industrial en terminal marítima Oil & Gas', 'Industrial maintenance at an Oil & Gas marine terminal'),
   subtitle: t('Mantenimiento de instalaciones y equipos · Mejoras y pequeños proyectos', 'Systems and equipment maintenance · Improvements and small projects'),
   summary: evosSummary, status: 'verified', deliveryLabel: t('Mantenimiento industrial y mejora de instalaciones', 'Industrial maintenance and facility improvements'),
@@ -65,6 +65,7 @@ export const evosProjects: Project[] = [{
   coverLabel: 'OIL & GAS / MAINTENANCE', coverNote: '',
   caseStudy: makeCase('es'), caseStudyEnglish: makeCase('en'),
 }];
+
 
 
 
