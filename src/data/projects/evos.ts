@@ -1,3 +1,4 @@
+import { evosRole, evosSummary, evosIntroduction, evosFunctions, evosTags } from '../evos-content';
 import type { Project, ProjectCaseStudy, Text } from '../portfolio';
 const t = (es: string, en: string): Text => ({ es, en });
 const records = [
@@ -40,25 +41,30 @@ const records = [
   },
 ];
 
-const summary = t('Gestión de actuaciones de mejora y modificación sobre instalaciones industriales existentes en una planta Oil & Gas en operación. Definición técnica, planificación, coordinación de contratistas y seguimiento de la ejecución.', 'Management of improvement and modification work on existing industrial systems at an operating Oil & Gas facility. Technical definition, planning, contractor coordination and execution monitoring.');
 const makeCase = (lang: 'es' | 'en'): ProjectCaseStudy => ({
   company: 'EVOS Algeciras', companyLabel: lang === 'es' ? 'Entorno profesional' : 'Professional setting',
-  location: 'Algeciras, Cádiz', role: lang === 'es' ? 'Ingeniería y gestión de proyectos industriales' : 'Industrial project engineering and management',
-  sectorLabel: 'Oil & Gas', typology: lang === 'es' ? 'Mejoras y modificaciones de instalaciones industriales existentes' : 'Improvements and modifications to existing industrial systems',
-  description: [summary[lang]], tags: (lang === 'es' ? ['Gestión de proyectos', 'Oil & Gas', 'Instalaciones industriales', 'Planificación', 'Coordinación de contratistas'] : ['Project management', 'Oil & Gas', 'Industrial systems', 'Planning', 'Contractor coordination']),
-  phases: [], disciplines: [],
-  technicalSections: records.map((r, index) => ({ id: r.id, title: r.title[lang], icon: 'process' as const, description: [r.summary[lang], index === 2 ? (lang === 'es' ? 'Actuación en desarrollo.' : 'Work in development.') : (lang === 'es' ? 'Actuación realizada.' : 'Completed intervention.')] })),
-  competencies: lang === 'es' ? ['Definición de soluciones técnicas y documentación para contratación', 'Planificación y coordinación de contratistas', 'Seguimiento de ejecución e integración con instalaciones existentes', 'Coordinación con Operaciones y Mantenimiento'] : ['Technical solutions and procurement documentation', 'Planning and contractor coordination', 'Execution monitoring and integration with existing systems', 'Coordination with Operations and Maintenance'],
-  images: [], documents: [],
+  location: 'Algeciras, Cádiz', role: evosRole[lang],
+  sectorLabel: 'Oil & Gas', typology: lang === 'es' ? 'Mantenimiento industrial, mejoras y pequeños proyectos' : 'Industrial maintenance, improvements and small projects',
+  description: evosIntroduction.map(p => p[lang]), tags: evosTags.slice(0, 6).map(tag => tag[lang]),
+  phases: [],
+  disciplinesTitle: lang === 'es' ? 'Funciones de mantenimiento y coordinación' : 'Maintenance and coordination responsibilities',
+  disciplines: evosFunctions.map((area, index) => ({ id: `evos-function-${index}`, title: area.title[lang], icon: index === 0 ? 'auxiliary' : index === 1 ? 'communications' : 'electrical', systems: area.items.map(item => item[lang]) })),
+  technicalSections: [{
+    id: 'work-examples', title: lang === 'es' ? 'Ejemplos de actuaciones de mantenimiento y mejora' : 'Examples of maintenance and improvement work', icon: 'process',
+    description: [lang === 'es' ? 'Actuaciones concretas dentro de una actividad más amplia de mantenimiento y mejora de planta.' : 'Specific interventions within a broader role in plant maintenance and improvement.'],
+    steps: [...records.map((r, index) => ({ title: r.title[lang], detail: `${r.summary[lang]} ${index === 2 ? (lang === 'es' ? 'En desarrollo.' : 'In development.') : (lang === 'es' ? 'Actuación realizada.' : 'Completed intervention.')}` })), { title: lang === 'es' ? 'Deficiencias detectadas en inspecciones' : 'Inspection findings', detail: lang === 'es' ? 'Análisis técnico, definición de medidas correctivas y seguimiento de trabajos para su subsanación.' : 'Technical analysis, definition of corrective measures and monitoring of corrective work.' }],
+  }],
+  competencies: evosTags.slice(3).map(tag => tag[lang]), images: [], documents: [],
 });
 export const evosProjects: Project[] = [{
   id: 'evos-project-management', reference: 'PROYECTOS — EVOS ALGECIRAS', sector: 'industry', interventions: ['design', 'delivery', 'management'],
-  title: t('Gestión de proyectos industriales Oil & Gas', 'Oil & Gas industrial project management'),
-  subtitle: t('Mejoras y modificaciones de instalaciones en operación', 'Improvements and modifications to operating systems'),
-  summary, status: 'verified', deliveryLabel: t('Ingeniería, gestión de proyectos y mantenimiento', 'Engineering, project management and maintenance'),
+  title: t('EVOS Algeciras · Mantenimiento industrial en Oil & Gas', 'EVOS Algeciras · Industrial maintenance in Oil & Gas'),
+  subtitle: t('Mantenimiento de instalaciones y equipos · Mejoras y pequeños proyectos', 'Systems and equipment maintenance · Improvements and small projects'),
+  summary: evosSummary, status: 'verified', deliveryLabel: t('Mantenimiento industrial y mejora de instalaciones', 'Industrial maintenance and facility improvements'),
   image: { src: 'assets/projects/evos/infografia.png', alt: t('Infografía ilustrativa de una terminal marítima Oil & Gas con almacenamiento y sistemas eléctricos, de instrumentación y seguridad. Representación conceptual.', 'Illustrative infographic of an Oil & Gas marine terminal with storage, electrical, instrumentation and safety systems. Conceptual representation.'), width: 1667, height: 943, fit: 'contain' },
-  coverLabel: 'OIL & GAS / PROJECT MANAGEMENT', coverNote: '',
+  coverLabel: 'OIL & GAS / MAINTENANCE', coverNote: '',
   caseStudy: makeCase('es'), caseStudyEnglish: makeCase('en'),
 }];
+
 
 
