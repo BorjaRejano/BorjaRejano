@@ -230,7 +230,7 @@ export const skills: { title: Text; items: Text[]; pending?: boolean }[] = [
   { title: text('Instalaciones y activos', 'Systems & assets'), items: [text('Mantenimiento eléctrico e instrumentación', 'Electrical maintenance & instrumentation'), text('Instalaciones MEP, industriales y Oil & Gas', 'MEP, industrial and Oil & Gas facilities'), text('EDAR, EBAR e infraestructuras hidráulicas', 'Wastewater treatment, pumping & water infrastructure'), text('Mejora, modernización y Due Diligence técnica', 'Improvement, modernisation & technical due diligence')] },
   { title: text('Gestión técnico-económica', 'Technical & financial management'), items: [text('Alcance, planificación y proyectos CAPEX/OPEX', 'Scope, planning & CAPEX/OPEX projects'), text('Licitación, contratación y proveedores', 'Tendering, procurement & suppliers'), text('Control de costes, presupuesto y desviaciones', 'Cost, budget & deviation control'), text('Coordinación de contratistas y puesta en servicio', 'Contractor coordination & commissioning')] },
   { title: text('Herramientas', 'Tools'), items: [text('AutoCAD · Dmelect', 'AutoCAD · Dmelect'), text('Presto · Microsoft Project', 'Presto · Microsoft Project'), text('Microsoft Office · GMAO', 'Microsoft Office · CMMS')] },
-  { title: text('Trabajo en equipo', 'Teamwork'), items: [text('Liderazgo y coordinación multidisciplinar', 'Leadership & multidisciplinary coordination'), text('Negociación y toma de decisiones', 'Negotiation & decision-making'), text('Adaptabilidad y gestión del tiempo', 'Adaptability & time management')] },
+  { title: text('Competencias personales', 'Personal Skills'), items: [text('Trabajo en equipo y coordinación multidisciplinar.', 'Teamwork and multidisciplinary coordination.'), text('Negociación y toma de decisiones.', 'Negotiation and decision-making.'), text('Adaptabilidad y gestión del tiempo.', 'Adaptability and time management.')] },
   { title: text('Idiomas', 'Languages'), items: [text('Inglés B1 · PET — University of Cambridge', 'English B1 · PET — University of Cambridge')] },
 ];
 export const education = [
@@ -245,6 +245,7 @@ export const training = [
   text('Gestión ágil de proyectos · 16 horas', 'Agile project management · 16 hours'),
   text('Prevención básica en construcción · 60 horas', 'Basic construction risk prevention · 60 hours'),
 ];
+
 
 
 
